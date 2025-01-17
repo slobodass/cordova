@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="page">
+        
+                <header class="header">
+                    <nav class="header__nav">
+                        <a href="#" class="header__logo">SANDOW</a>
+                        <img src="https://static.tildacdn.com/tild3162-6639-4462-b533-356431363365/Braslety_Sandow_01.svg"
+                            alt="">
+                        <div class="header__links">
+                            <ul class="header__list">
+                                <li>
+                                    <a class="header__link" href="#">Главная</a>
+                                </li>
+                                <li>
+                                    <a class="header__link" href="#why-us">О нас</a>
+                                </li>
+                                <li>
+                                    <a class="header__link" href="#">Тренеры</a>
+                                </li>
+                                <li>
+                                    <a class="header__link" href="#">Профиль</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="login">
+                            <button class="sign-up">За абонементом!</button>
+                        </div>
+                    </nav>
+                </header>
+                <main class="main">
+                    <section class="for-you">
+                        <div class="for-you__text-wrapper">
+                            <h2 class="for-you__title">24/7/365 для Вас:</h2>
+                            <p class="for-you__subtitle">Премиум фитнес клуб с инновационным подходом к тренировкам, уникальным
+                                отношением к здоровью и диагностикой состава тела.</p>
+                        </div>
+                        <img class="for-you__pic"
+                            src="https://optim.tildacdn.com/tild6636-6330-4262-b366-306163363434/-/format/webp/Photo_Viktor_02_.jpg"
+                            alt="">
+                    </section>
+                    <section class="why-us" id="why-us">
+                        <img class="why-us__pic" src="https://optim.tildacdn.com/tild3363-3533-4039-b135-653163383564/-/format/webp/old_img_sandow.png" alt="">
+                        <div class="why-us__wrapper">
+                            <h2 class="why-us__wrapper-text">Почему выбирают нас</h2>
+        
+                            <div class="why-us__list-wrapper">
+                                <ul class="why-us__list">
+        
+        
+                                    <li class="why-us__item">
+                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild3133-6235-4138-a631-623735336633/clock.svg" alt="">
+                                        <p class="why-us__item-text">Круглосуточно</p>
+                                    </li>
+        
+                                    <li class="why-us__item">
+                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild6433-3561-4732-a235-353434376633/Gym.svg" alt="">
+                                        <p class="why-us__item-text">Тренажерный зал 1000 кв/м</p>
+                                    </li>
+        
+                                    <li class="why-us__item">
+                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild3035-3138-4063-a663-333238303833/Stationery_Bike.svg" alt="">
+                                        <p class="why-us__item-text">200+ ед тренажеров</p>
+                                    </li>
+        
+                                    <li class="why-us__item">
+                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild3330-6138-4236-a564-626539353161/parking_location.svg" alt="">
+                                        <p class="why-us__item-text">Охраняемая парковка</p>
+                                    </li>
+        
+                                    <li class="why-us__item">
+                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild6665-3564-4233-a562-373034666664/pulse_measurement.svg" alt="">
+                                        <p class="why-us__item-text">Кардиокинотеатр</p>
+                                    </li>
+        
+                                    <li class="why-us__item">
+                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild3263-3432-4430-b862-353830646164/Bath_Robe.svg" alt="">
+                                        <p class="why-us__item-text">Настоящая парилка</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+        
+                    <section class="trainers">
+                        <h2>Тренеры</h2>
+                        <ul class="trainers__list">
+                            <li class="trainers__item">
+                                <div class="trainers__images-wrapper">
+                                    <img class="trainers__img" src="https://optim.tildacdn.com/tild6265-6334-4936-a234-633139313331/-/format/webp/PozhilovaN.jpg" alt="">
+                                    <img class="trainers__logo" src="https://static.tildacdn.com/tild3162-6639-4462-b533-356431363365/Braslety_Sandow_01.svg" alt="">
+                                    <h3 class="trainers__trainer-name">Пожилова Наталья</h3>
+                                </div>
+                                <div class="trainers__trainer-info">
+                                    <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
+                                    <p class="trainers__trainer-preview">Фитнес эксперт. Тренер ГП</p>
+                                    <p class="trainers__trainer-discription">КМС по легкой атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры, выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+                                </div>
+                            </li>                    
+                        </ul>
+                    </section>
+                    
+        
+                </main>
+                
+            </div>
+        </div>
+        <!-- <script src="cordova.js"></script> -->
+        <script src="js/index.js"></script>
+    </body>
+</html>
