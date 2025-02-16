@@ -1,33 +1,7 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -38,23 +12,22 @@
     </head>
     <body>
         <div class="app">
-            <div class="page">
-        
+            <div class="page" id="page">
+
                 <header class="header">
                     <nav class="header__nav">
-                        <a href="#" class="header__logo">SANDOW</a>
                         <img src="https://static.tildacdn.com/tild3162-6639-4462-b533-356431363365/Braslety_Sandow_01.svg"
                             alt="">
                         <div class="header__links">
                             <ul class="header__list">
                                 <li>
-                                    <a class="header__link" href="#">Главная</a>
+                                    <a class="header__link" href="#page">Главная</a>
                                 </li>
                                 <li>
                                     <a class="header__link" href="#why-us">О нас</a>
                                 </li>
                                 <li>
-                                    <a class="header__link" href="#">Тренеры</a>
+                                    <a class="header__link" href="#trainers">Тренеры</a>
                                 </li>
                                 <li>
                                     <a class="header__link" href="#">Профиль</a>
@@ -78,7 +51,9 @@
                             alt="">
                     </section>
                     <section class="why-us" id="why-us">
-                        <img class="why-us__pic" src="https://optim.tildacdn.com/tild3363-3533-4039-b135-653163383564/-/format/webp/old_img_sandow.png" alt="">
+                        <img class="why-us__pic"
+                            src="https://optim.tildacdn.com/tild3363-3533-4039-b135-653163383564/-/format/webp/old_img_sandow.png"
+                            alt="">
                         <div class="why-us__wrapper">
                             <h2 class="why-us__wrapper-text">Почему выбирают нас</h2>
         
@@ -87,32 +62,44 @@
         
         
                                     <li class="why-us__item">
-                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild3133-6235-4138-a631-623735336633/clock.svg" alt="">
+                                        <img class="why-us__item-img"
+                                            src="https://static.tildacdn.com/tild3133-6235-4138-a631-623735336633/clock.svg"
+                                            alt="">
                                         <p class="why-us__item-text">Круглосуточно</p>
                                     </li>
         
                                     <li class="why-us__item">
-                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild6433-3561-4732-a235-353434376633/Gym.svg" alt="">
+                                        <img class="why-us__item-img"
+                                            src="https://static.tildacdn.com/tild6433-3561-4732-a235-353434376633/Gym.svg"
+                                            alt="">
                                         <p class="why-us__item-text">Тренажерный зал 1000 кв/м</p>
                                     </li>
         
                                     <li class="why-us__item">
-                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild3035-3138-4063-a663-333238303833/Stationery_Bike.svg" alt="">
+                                        <img class="why-us__item-img"
+                                            src="https://static.tildacdn.com/tild3035-3138-4063-a663-333238303833/Stationery_Bike.svg"
+                                            alt="">
                                         <p class="why-us__item-text">200+ ед тренажеров</p>
                                     </li>
         
                                     <li class="why-us__item">
-                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild3330-6138-4236-a564-626539353161/parking_location.svg" alt="">
+                                        <img class="why-us__item-img"
+                                            src="https://static.tildacdn.com/tild3330-6138-4236-a564-626539353161/parking_location.svg"
+                                            alt="">
                                         <p class="why-us__item-text">Охраняемая парковка</p>
                                     </li>
         
                                     <li class="why-us__item">
-                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild6665-3564-4233-a562-373034666664/pulse_measurement.svg" alt="">
+                                        <img class="why-us__item-img"
+                                            src="https://static.tildacdn.com/tild6665-3564-4233-a562-373034666664/pulse_measurement.svg"
+                                            alt="">
                                         <p class="why-us__item-text">Кардиокинотеатр</p>
                                     </li>
         
                                     <li class="why-us__item">
-                                        <img class="why-us__item-img" src="https://static.tildacdn.com/tild3263-3432-4430-b862-353830646164/Bath_Robe.svg" alt="">
+                                        <img class="why-us__item-img"
+                                            src="https://static.tildacdn.com/tild3263-3432-4430-b862-353830646164/Bath_Robe.svg"
+                                            alt="">
                                         <p class="why-us__item-text">Настоящая парилка</p>
                                     </li>
                                 </ul>
@@ -120,30 +107,296 @@
                         </div>
                     </section>
         
-                    <section class="trainers">
-                        <h2>Тренеры</h2>
-                        <ul class="trainers__list">
-                            <li class="trainers__item">
-                                <div class="trainers__images-wrapper">
-                                    <img class="trainers__img" src="https://optim.tildacdn.com/tild6265-6334-4936-a234-633139313331/-/format/webp/PozhilovaN.jpg" alt="">
-                                    <img class="trainers__logo" src="https://static.tildacdn.com/tild3162-6639-4462-b533-356431363365/Braslety_Sandow_01.svg" alt="">
-                                    <h3 class="trainers__trainer-name">Пожилова Наталья</h3>
+                    <section class="trainers" id="trainers">
+                        <h2 class="trainers__title">Тренеры</h2>
+        
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+        
+                                <div class="swiper-slide trainers__item">
+                                    <div class="trainer__card">
+                                        <div class="trainers__trainer-info">
+                                            <h4 class="trainers__trainer-name-subtitle">
+                                                Харлан Вячеслав
+                                            </h4>
+                                            <p class="trainers__trainer-discription">
+                                                Персональный фитнес эксперт. Опыт тренировок более 20 лет.
+                                                Дипломированный фитнес тренер. МС России по армрестлингу.
+                                                Чемпион России.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="trainers__trainer-info">
-                                    <h4 class="trainers__trainer-name-subtitle">Пожилова Наталья</h4>
-                                    <p class="trainers__trainer-preview">Фитнес эксперт. Тренер ГП</p>
-                                    <p class="trainers__trainer-discription">КМС по легкой атлетике. Стаж работы персональным тренером 5 лет Направление: коррекция фигуры, выносливость, похудение, набор мышечной массы. Работа с опорно- двигательным аппаратом, укрепление мышечного корсета, стретчинг, растяжка, здоровая спина.</p>
+        
+                                <div class="swiper-slide trainers__item">
+                                    <div class="trainer__card">
+                                        <div class="trainers__trainer-info">
+                                            <h4 class="trainers__trainer-name-subtitle">
+                                                Харлан Вячеслав
+                                            </h4>
+                                            <p class="trainers__trainer-discription">
+                                                Персональный фитнес эксперт. Опыт тренировок более 20 лет.
+                                                Дипломированный фитнес тренер. МС России по армрестлингу.
+                                                Чемпион России.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </li>                    
+        
+                                <div class="swiper-slide trainers__item">
+                                    <div class="trainer__card">
+                                        <div class="trainers__trainer-info">
+                                            <h4 class="trainers__trainer-name-subtitle">
+                                                Харлан Вячеслав
+                                            </h4>
+                                            <p class="trainers__trainer-discription">
+                                                Персональный фитнес эксперт. Опыт тренировок более 20 лет.
+                                                Дипломированный фитнес тренер. МС России по армрестлингу.
+                                                Чемпион России.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide trainers__item">
+                                    <div class="trainer__card">
+                                        <div class="trainers__trainer-info">
+                                            <h4 class="trainers__trainer-name-subtitle">
+                                                Харлан Вячеслав
+                                            </h4>
+                                            <p class="trainers__trainer-discription">
+                                                Персональный фитнес эксперт. Опыт тренировок более 20 лет.
+                                                Дипломированный фитнес тренер. МС России по армрестлингу.
+                                                Чемпион России.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide trainers__item">
+                                    <div class="trainer__card">
+                                        <div class="trainers__trainer-info">
+                                            <h4 class="trainers__trainer-name-subtitle">
+                                                Харлан Вячеслав
+                                            </h4>
+                                            <p class="trainers__trainer-discription">
+                                                Персональный фитнес эксперт. Опыт тренировок более 20 лет.
+                                                Дипломированный фитнес тренер. МС России по армрестлингу.
+                                                Чемпион России.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide trainers__item">
+                                    <div class="trainer__card">
+                                        <div class="trainers__trainer-info">
+                                            <h4 class="trainers__trainer-name-subtitle">
+                                                Харлан Вячеслав
+                                            </h4>
+                                            <p class="trainers__trainer-discription">
+                                                Персональный фитнес эксперт. Опыт тренировок более 20 лет.
+                                                Дипломированный фитнес тренер. МС России по армрестлингу.
+                                                Чемпион России.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide trainers__item">
+                                    <div class="trainer__card">
+                                        <div class="trainers__trainer-info">
+                                            <h4 class="trainers__trainer-name-subtitle">
+                                                Харлан Вячеслав
+                                            </h4>
+                                            <p class="trainers__trainer-discription">
+                                                Персональный фитнес эксперт. Опыт тренировок более 20 лет.
+                                                Дипломированный фитнес тренер. МС России по армрестлингу.
+                                                Чемпион России.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide trainers__item">
+                                    <div class="trainer__card">
+                                        <div class="trainers__trainer-info">
+                                            <h4 class="trainers__trainer-name-subtitle">
+                                                Харлан Вячеслав
+                                            </h4>
+                                            <p class="trainers__trainer-discription">
+                                                Персональный фитнес эксперт. Опыт тренировок более 20 лет.
+                                                Дипломированный фитнес тренер. МС России по армрестлингу.
+                                                Чемпион России.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+        
+        
+        
+                            </div>
+        
+                        </div>
+        
+                    </section>
+        
+                    <section class="trainings">
+                        <h2 class="trainings__title">Групповые программы</h2>
+                        <p class="trainings__subtitle">Выбери свое Направление</p>
+                        <ul class="trainings__list">
+                            <li class="trainings__item">
+        
+                                <div class="trainings__card trainings__card1">
+                                    <h3 class="trainings__card-text">Йога</h3>
+                                </div>
+        
+                            </li>
+                            <li class="trainings__item">
+        
+                                <div class="trainings__card trainings__card2">
+                                    <h3 class="trainings__card-text">Кросс-тренинг</h3>
+                                </div>
+        
+                            </li>
+                            <li class="trainings__item">
+        
+                                <div class="trainings__card trainings__card3">
+                                    <h3 class="trainings__card-text">Здоровая спина</h3>
+                                </div>
+        
+                            </li>
+                            <li class="trainings__item">
+        
+                                <div class="trainings__card trainings__card4">
+                                    <h3 class="trainings__card-text">Dance hall</h3>
+                                </div>
+        
+                            </li>
+                            <li class="trainings__item">
+        
+                                <div class="trainings__card trainings__card5">
+                                    <h3 class="trainings__card-text">Zumba</h3>
+                                </div>
+        
+                            </li>
+                            <li class="trainings__item">
+        
+                                <div class="trainings__card trainings__card6">
+                                    <h3 class="trainings__card-text">Шпагат</h3>
+                                </div>
+        
+                            </li>
+                            <li class="trainings__item">
+        
+                                <div class="trainings__card trainings__card7">
+                                    <h3 class="trainings__card-text">Стретчинг</h3>
+                                </div>
+        
+                            </li>
+                            <li class="trainings__item">
+        
+                                <div class="trainings__card trainings__card8">
+                                    <h3 class="trainings__card-text">Табата</h3>
+                                </div>
+        
+                            </li>
+                            <li class="trainings__item">
+        
+                                <div class="trainings__card trainings__card9">
+                                    <h3 class="trainings__card-text">TRX</h3>
+                                </div>
+        
+                            </li>
                         </ul>
                     </section>
-                    
+        
         
                 </main>
-                
+        
+                <footer class="footer">
+                    <div class="footer__social">
+                        <ul class="footer__social-list">
+                            <li class="footer__social-item">
+                                <a class="footer__social-link" href="">
+                                    <img class="footer__social-logo" src="<%= require('./images/VK.png') %>" alt="VK">
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link" href="">
+                                    <img class="footer__social-logo" src="<%= require('./images/YouTube.png') %>" alt="VK">
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link" href="">
+                                    <img class="footer__social-logo" src="<%= require('./images/Telegram.png') %>" alt="VK">
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a class="footer__social-link" href="">
+                                    <img class="footer__social-logo" src="<%= require('./images/Whatsapp.png') %>" alt="VK">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <div class="footer__info">
+                        <div class="footer__logo-wrapper">
+                            <a class="footer__link-logo" href="">
+                                <img class="footer__logo-img"
+                                    src="https://static.tildacdn.com/tild3162-6639-4462-b533-356431363365/Braslety_Sandow_01.svg"
+                                    alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer_navigation-wrapper">
+                            <nav class="footer_navigation">
+                                <ul class="footer_navigation-list">
+                                    <li class="footer_navigation-item">
+                                        <a class="footer_navigation-link" href="#">Интерьер</a>
+                                    </li>
+                                    <li class="footer_navigation-item">
+                                        <a class="footer_navigation-link" href="#">Программы</a>
+                                    </li>
+                                    <li class="footer_navigation-item">
+                                        <a class="footer_navigation-link" href="#">Тренеры</a>
+                                    </li>
+                                    <li class="footer_navigation-item">
+                                        <a class="footer_navigation-link" href="#">Контакты</a>
+                                    </li>
+                                    <li class="footer_navigation-item">
+                                        <a class="footer_navigation-link" href="#">Получить карту</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__adress">
+                            <p class="footer__adress-text">Москва, ул. Нижегородская, 29-33 </p>
+                            <p class="footer__adress-text">Бизнес-центр «Нижегородский», 2 этаж</p>
+                            <img class="footer__adress-pic"
+                                src="https://static.tildacdn.com/tild6434-6138-4438-a530-353161383465/phone-receiver.svg"
+                                alt="telefon">
+                            <a class="footer__adress-tel" href="tel:+74957956957">+74957956957</a>
+                        </div>
+                    </div>
+        
+                    <div class="footer__bottom">
+                        <p class="footer__bottom-text">Sandow Fitness Club © 2019-2025</p>
+                    </div>
+                </footer>
+        
+                <div class="modal">
+                    <div class="modal_content">
+                        <h3 class="modal_title"></h3>
+                        <p class="modal_text"></p>
+                        <button class="modal_button">Бронировать</button>
+                        <button class="modal__button-close">x</button>
+                    </div>
+                </div>
+        
             </div>
-        </div>
-        <!-- <script src="cordova.js"></script> -->
+        
+        <script src="cordova.js"></script>
         <script src="js/index.js"></script>
     </body>
 </html>
