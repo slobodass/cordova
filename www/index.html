@@ -2,12 +2,30 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com https://fonts.googleapis.com https://fonts.gstatic.com 'unsafe-eval';
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+                 img-src 'self' data: content: https://*;
+                 media-src *;">
+            <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
+        <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+
         <title>Hello World</title>
     </head>
     <body>
@@ -56,46 +74,46 @@
                             alt="">
                         <div class="why-us__wrapper">
                             <h2 class="why-us__wrapper-text">Почему выбирают нас</h2>
-        
+
                             <div class="why-us__list-wrapper">
                                 <ul class="why-us__list">
-        
-        
+
+
                                     <li class="why-us__item">
                                         <img class="why-us__item-img"
                                             src="https://static.tildacdn.com/tild3133-6235-4138-a631-623735336633/clock.svg"
                                             alt="">
                                         <p class="why-us__item-text">Круглосуточно</p>
                                     </li>
-        
+
                                     <li class="why-us__item">
                                         <img class="why-us__item-img"
                                             src="https://static.tildacdn.com/tild6433-3561-4732-a235-353434376633/Gym.svg"
                                             alt="">
                                         <p class="why-us__item-text">Тренажерный зал 1000 кв/м</p>
                                     </li>
-        
+
                                     <li class="why-us__item">
                                         <img class="why-us__item-img"
                                             src="https://static.tildacdn.com/tild3035-3138-4063-a663-333238303833/Stationery_Bike.svg"
                                             alt="">
                                         <p class="why-us__item-text">200+ ед тренажеров</p>
                                     </li>
-        
+
                                     <li class="why-us__item">
                                         <img class="why-us__item-img"
                                             src="https://static.tildacdn.com/tild3330-6138-4236-a564-626539353161/parking_location.svg"
                                             alt="">
                                         <p class="why-us__item-text">Охраняемая парковка</p>
                                     </li>
-        
+
                                     <li class="why-us__item">
                                         <img class="why-us__item-img"
                                             src="https://static.tildacdn.com/tild6665-3564-4233-a562-373034666664/pulse_measurement.svg"
                                             alt="">
                                         <p class="why-us__item-text">Кардиокинотеатр</p>
                                     </li>
-        
+
                                     <li class="why-us__item">
                                         <img class="why-us__item-img"
                                             src="https://static.tildacdn.com/tild3263-3432-4430-b862-353830646164/Bath_Robe.svg"
@@ -106,13 +124,13 @@
                             </div>
                         </div>
                     </section>
-        
+
                     <section class="trainers" id="trainers">
                         <h2 class="trainers__title">Тренеры</h2>
-        
+
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
-        
+
                                 <div class="swiper-slide trainers__item">
                                     <div class="trainer__card">
                                         <div class="trainers__trainer-info">
@@ -127,7 +145,7 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                                 <div class="swiper-slide trainers__item">
                                     <div class="trainer__card">
                                         <div class="trainers__trainer-info">
@@ -142,7 +160,7 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                                 <div class="swiper-slide trainers__item">
                                     <div class="trainer__card">
                                         <div class="trainers__trainer-info">
@@ -157,7 +175,7 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                                 <div class="swiper-slide trainers__item">
                                     <div class="trainer__card">
                                         <div class="trainers__trainer-info">
@@ -172,7 +190,7 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                                 <div class="swiper-slide trainers__item">
                                     <div class="trainer__card">
                                         <div class="trainers__trainer-info">
@@ -187,7 +205,7 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                                 <div class="swiper-slide trainers__item">
                                     <div class="trainer__card">
                                         <div class="trainers__trainer-info">
@@ -202,7 +220,7 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                                 <div class="swiper-slide trainers__item">
                                     <div class="trainer__card">
                                         <div class="trainers__trainer-info">
@@ -217,7 +235,7 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                                 <div class="swiper-slide trainers__item">
                                     <div class="trainer__card">
                                         <div class="trainers__trainer-info">
@@ -232,115 +250,115 @@
                                         </div>
                                     </div>
                                 </div>
-        
-        
-        
-        
+
+
+
+
                             </div>
-        
+
                         </div>
-        
+
                     </section>
-        
+
                     <section class="trainings">
                         <h2 class="trainings__title">Групповые программы</h2>
                         <p class="trainings__subtitle">Выбери свое Направление</p>
                         <ul class="trainings__list">
                             <li class="trainings__item">
-        
+
                                 <div class="trainings__card trainings__card1">
                                     <h3 class="trainings__card-text">Йога</h3>
                                 </div>
-        
+
                             </li>
                             <li class="trainings__item">
-        
+
                                 <div class="trainings__card trainings__card2">
                                     <h3 class="trainings__card-text">Кросс-тренинг</h3>
                                 </div>
-        
+
                             </li>
                             <li class="trainings__item">
-        
+
                                 <div class="trainings__card trainings__card3">
                                     <h3 class="trainings__card-text">Здоровая спина</h3>
                                 </div>
-        
+
                             </li>
                             <li class="trainings__item">
-        
+
                                 <div class="trainings__card trainings__card4">
                                     <h3 class="trainings__card-text">Dance hall</h3>
                                 </div>
-        
+
                             </li>
                             <li class="trainings__item">
-        
+
                                 <div class="trainings__card trainings__card5">
                                     <h3 class="trainings__card-text">Zumba</h3>
                                 </div>
-        
+
                             </li>
                             <li class="trainings__item">
-        
+
                                 <div class="trainings__card trainings__card6">
                                     <h3 class="trainings__card-text">Шпагат</h3>
                                 </div>
-        
+
                             </li>
                             <li class="trainings__item">
-        
+
                                 <div class="trainings__card trainings__card7">
                                     <h3 class="trainings__card-text">Стретчинг</h3>
                                 </div>
-        
+
                             </li>
                             <li class="trainings__item">
-        
+
                                 <div class="trainings__card trainings__card8">
                                     <h3 class="trainings__card-text">Табата</h3>
                                 </div>
-        
+
                             </li>
                             <li class="trainings__item">
-        
+
                                 <div class="trainings__card trainings__card9">
                                     <h3 class="trainings__card-text">TRX</h3>
                                 </div>
-        
+
                             </li>
                         </ul>
                     </section>
-        
-        
+
+
                 </main>
-        
+
                 <footer class="footer">
                     <div class="footer__social">
                         <ul class="footer__social-list">
                             <li class="footer__social-item">
                                 <a class="footer__social-link" href="">
-                                    <img class="footer__social-logo" src="<%= require('./images/VK.png') %>" alt="VK">
+                                    <img class="footer__social-logo" src="./img/Telegram.png" alt="Telegram">
                                 </a>
                             </li>
                             <li class="footer__social-item">
                                 <a class="footer__social-link" href="">
-                                    <img class="footer__social-logo" src="<%= require('./images/YouTube.png') %>" alt="VK">
+                                    <img class="footer__social-logo" src="./img/YouTube.png" alt="YouTube">
                                 </a>
                             </li>
                             <li class="footer__social-item">
                                 <a class="footer__social-link" href="">
-                                    <img class="footer__social-logo" src="<%= require('./images/Telegram.png') %>" alt="VK">
+                                    <img class="footer__social-logo" src="./img/VK.png" alt="VK">
                                 </a>
                             </li>
                             <li class="footer__social-item">
                                 <a class="footer__social-link" href="">
-                                    <img class="footer__social-logo" src="<%= require('./images/Whatsapp.png') %>" alt="VK">
+                                    <img class="footer__social-logo" src="./img/Whatsapp.png" alt="Whatsapp">
                                 </a>
                             </li>
                         </ul>
                     </div>
-        
+
                     <div class="footer__info">
                         <div class="footer__logo-wrapper">
                             <a class="footer__link-logo" href="">
@@ -379,12 +397,12 @@
                             <a class="footer__adress-tel" href="tel:+74957956957">+74957956957</a>
                         </div>
                     </div>
-        
+
                     <div class="footer__bottom">
                         <p class="footer__bottom-text">Sandow Fitness Club © 2019-2025</p>
                     </div>
                 </footer>
-        
+
                 <div class="modal">
                     <div class="modal_content">
                         <h3 class="modal_title"></h3>
@@ -393,9 +411,9 @@
                         <button class="modal__button-close">x</button>
                     </div>
                 </div>
-        
+
             </div>
-        
+
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
     </body>
