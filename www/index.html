@@ -10,21 +10,6 @@
             <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
-<script>
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-  };
-  firebase.initializeApp(firebaseConfig);
-</script>
 
         <title>Hello World</title>
     </head>
@@ -338,22 +323,22 @@
                         <ul class="footer__social-list">
                             <li class="footer__social-item">
                                 <a class="footer__social-link" href="">
-                                    <img class="footer__social-logo" src="./img/Telegram.png" alt="Telegram">
+                                    <img class="footer__social-logo" src="<%= require('./img/Telegram.png')%>" alt="Telegram">
                                 </a>
                             </li>
                             <li class="footer__social-item">
                                 <a class="footer__social-link" href="">
-                                    <img class="footer__social-logo" src="./img/YouTube.png" alt="YouTube">
+                                    <img class="footer__social-logo" src="<%= require('./img/YouTube.png')%>" alt="YouTube">
                                 </a>
                             </li>
                             <li class="footer__social-item">
                                 <a class="footer__social-link" href="">
-                                    <img class="footer__social-logo" src="./img/VK.png" alt="VK">
+                                    <img class="footer__social-logo" src="<%= require('./img/VK.png')%>" alt="VK">
                                 </a>
                             </li>
                             <li class="footer__social-item">
                                 <a class="footer__social-link" href="">
-                                    <img class="footer__social-logo" src="./img/Whatsapp.png" alt="Whatsapp">
+                                    <img class="footer__social-logo" src="<%= require('./img/Whatsapp.png')%>" alt="Whatsapp">
                                 </a>
                             </li>
                         </ul>
@@ -414,7 +399,5 @@
 
             </div>
 
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
     </body>
 </html>
