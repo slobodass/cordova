@@ -2,15 +2,15 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin"); 
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/js/index.js", 
+    main: "./src/js/index.js",
   },
   devtool: "source-map",
   output: {
-    path: path.resolve(__dirname, "www"), 
+    path: path.resolve(__dirname, "www"),
     filename: "js/main.js",
     publicPath: "",
   },
@@ -20,6 +20,11 @@ module.exports = {
     open: true,
     compress: true,
     port: 8080,
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"), 
+    },
   },
   module: {
     rules: [
@@ -32,14 +37,20 @@ module.exports = {
         test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",
         generator: {
-          filename: "img/[name][ext]", 
+          filename: "img/[name][ext]",
         },
       },
       {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              url: true, 
+              importLoaders: 1,
+            },
+          },
           "postcss-loader",
         ],
       },
@@ -47,7 +58,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html", 
+      template: "./src/index.html",
       filename: "index.html",
     }),
     new MiniCssExtractPlugin({
@@ -55,9 +66,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: "src/img", to: "img" }, 
-      ],
+      patterns: [{ from: "src/img", to: "img" }],
     }),
   ],
 };
