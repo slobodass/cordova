@@ -589,6 +589,19 @@ body {
     background-size: 100%;
     margin: 0;
   }
+
+  .modal_content {
+    padding: 20px;
+    max-width: 640px;
+    width: 90%;
+}
+
+.modal_text {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -667,4 +680,17 @@ body {
     margin: 0 auto;
     background-size: contain;
   }
+
+  .modal_content {
+    padding: 20px;
+    max-width: 480px;
+    width: 90%;
+}
+
+.modal_text {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
 }
