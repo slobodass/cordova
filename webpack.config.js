@@ -7,11 +7,12 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: {
     main: "./src/js/index.js",
+    login: "./src/js/login.js", 
   },
   devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "www"),
-    filename: "js/main.js",
+    filename: "js/[name].js",  
     publicPath: "",
   },
   mode: "development",
@@ -60,9 +61,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html",
+      chunks: ["main"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/login.html",
+      filename: "login.html",
+      chunks: ["login"],
     }),
     new MiniCssExtractPlugin({
-      filename: "css/style.css",
+      filename: "css/[name].css",
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
