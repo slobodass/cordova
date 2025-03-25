@@ -24,6 +24,7 @@ const authEmail = document.querySelector(".auth-email");
 const authPassword = document.querySelector(".auth-password");
 const modalTitle = document.querySelector(".modal_title");
 const modalText = document.querySelector(".modal_text");
+const logoutBtn = document.querySelector('.logout-btn')
 
 
 // const firebaseConfig = {
@@ -149,7 +150,16 @@ const swiper = new Swiper(".swiper-container", {
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-
+function logout() {
+  signOut(auth)
+    .then(() => {
+      console.log('Выход выполнен успешно');
+      window.location.href = 'login.html';
+    })
+    .catch((error) => {
+      console.error('Ошибка при выходе: ', error)
+    })
+}
 
 
 // крестик закрывает окно
@@ -162,6 +172,8 @@ trainingsModal.addEventListener("click", (event) => {
     trainingsModal.classList.remove("modal_active");
   }
 });
+
+logoutBtn.addEventListener('click', logout)
 
 
 
