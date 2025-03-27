@@ -4,12 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(
-    0,
-    0,
-    0,
-    0
-  ); 
+  -webkit-tap-highlight-color: rgba(0,
+      0,
+      0,
+      0);
 }
 
 
@@ -283,18 +281,23 @@ body {
 .trainings__card4 {
   background-image: url(https://optim.tildacdn.com/tild6239-6134-4130-b836-346338636665/-/resize/784x/-/format/webp/g4.png);
 }
+
 .trainings__card5 {
   background-image: url(https://optim.tildacdn.com/tild6139-3136-4464-b664-663338393062/-/resize/788x/-/format/webp/g5.png);
 }
+
 .trainings__card6 {
   background-image: url(https://optim.tildacdn.com/tild3031-3261-4335-a662-343465346239/-/resize/762x/-/format/webp/g6.png);
 }
+
 .trainings__card7 {
   background-image: url(https://optim.tildacdn.com/tild3830-3339-4062-b335-373461353431/-/resize/812x/-/format/webp/g2137.png);
 }
+
 .trainings__card8 {
   background-image: url(https://optim.tildacdn.com/tild6231-3833-4232-b438-643763616264/-/resize/812x/-/format/webp/g72121.png);
 }
+
 .trainings__card9 {
   background-image: url(https://optim.tildacdn.com/tild6362-6232-4534-b430-616230303763/-/resize/720x/-/format/webp/g11.png);
 }
@@ -369,9 +372,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .footer__social-logo {
   width: 50px;
 }
+
 .footer__social-list {
   display: flex;
   gap: 20px;
@@ -433,8 +438,14 @@ body {
   overflow: hidden;
   margin: 0 0 120px 0;
 }
-@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
+
+.trainings__subtitle {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {}
 
 @media screen and (max-width: 768px) {
   .app {
@@ -581,14 +592,14 @@ body {
     padding: 20px;
     max-width: 640px;
     width: 90%;
-}
+  }
 
-.modal_text {
-  font-size: 14px;
-  margin-bottom: 20px;
-  line-height: 1.5;
-  text-align: center;
-}
+  .modal_text {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -643,11 +654,6 @@ body {
     justify-content: end;
   }
 
-  .trainings__subtitle {
-    text-align: center;
-    margin: 0 0 30px 0;
-  }
-
   .trainings__card-text {
     position: absolute;
     top: 50px;
@@ -672,14 +678,14 @@ body {
     padding: 20px;
     max-width: 480px;
     width: 90%;
-}
+  }
 
-.modal_text {
-  font-size: 14px;
-  margin-bottom: 20px;
-  line-height: 1.5;
-  text-align: center;
-}
+  .modal_text {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
 }
 
 
@@ -754,16 +760,111 @@ button {
   font-size: 16px;
 }
 
+.form {
+  color: #151515;
+  font-family: "Montserrat";
+}
 
 
-.logout-btn{
+.form__title {
+  color: #151515;
+}
+
+
+.logout-btn {
   width: 20px;
   height: 20px;
   border: none;
   background: transparent;
 }
 
-.logout-img{
+.logout-img {
   width: 20px;
   height: 20px;
+}
+
+
+.trainings {
+  background-image: url(https://optim.tildacdn.com/tild6231-3863-4662-a363-613935666638/-/format/webp/girl2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 600px 160px;
+  margin-bottom: 20px;
+}
+
+
+.mission {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mission__title {
+  font-size: 60px;
+  margin-bottom: 16px;
+}
+
+.mission_text {
+  width: 60%;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.mission_text:last-of-type {
+  margin-bottom: 40px;
+}
+
+.mission_presentation {
+  background-color: #1F5BFF;
+  padding: 20px 30px;
+  border-radius: 30px;
+}
+
+.slider {
+  text-align: left;
+  position: relative;
+}
+
+.slider-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 420px;
+}
+
+.slide-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.interiers__title {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.image-container {
+  flex: 2;
+}
+
+.slider-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-btn {
+  background: transparent;
+  color: white;
+  border: 1px white solid;
+  padding: 10px 10px;
+  font-size: 1.2em;
+  cursor: pointer;
 }

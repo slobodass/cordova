@@ -12,6 +12,7 @@ import {
   signOut
 } from "firebase/auth";
 
+
 const loginTab = document.getElementById("login-tab");
 const registerTab = document.getElementById("register-tab");
 const loginForm = document.getElementById("login-form");
@@ -104,6 +105,32 @@ const cardData = [
       "TRX - Если Ваша цель - полный контроль над координацией и балансом тела с высоким темпом тренировочной интенсивности, тогда клубный формат TRX – для Вас! TRX – это одновременно и название уникального функционального тренажера, и зарекомендовавшей себя по всему миру эффективной системы функциональных тренировок Total Resistance eXercise, призванной в краткий период придать вашему телу мускулистость и тонус, повысить скорость обменных процессов и эффективно снизить массу тела! В Sandow Fitness – Вы можете выбрать для себя как индивидуальный, так и групповой формат этого топового направления!",
   },
 ];
+
+
+const images = ["https://optim.tildacdn.com/tild3833-3962-4766-a236-306363663437/-/format/webp/DSC01560-01.jpg", "https://static.tildacdn.com/tild6363-3338-4436-b035-313961303464/DSC015612.jpg", "https://static.tildacdn.com/tild3834-3131-4862-a363-306364333639/DSC01622.jpg", "https://static.tildacdn.com/tild3262-6337-4532-a562-643363663239/DSC01755.jpg", "https://static.tildacdn.com/tild6132-6135-4561-b562-663461633832/photo.jpg", "https://static.tildacdn.com/tild3430-3663-4265-a166-313130323235/DSC01587.jpg", "https://static.tildacdn.com/tild3733-3562-4966-a461-666138313864/DSC01679.jpg", "https://static.tildacdn.com/tild3735-3537-4830-a138-653538336337/DSC01640.jpg"]
+const sliderImage = document.querySelector(".slider-image")
+const slideNumber = document.querySelector(".slide-number")
+const totalSlide = document.querySelector(".totla-slide")
+const prevBtn = document.querySelector(".prev-btn")
+const nextBtn = document.querySelector(".next-btn")
+let currentIndex = 0
+
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1
+  updateSlider()
+})
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+  updateSlider()
+})
+
+function updateSlider() {
+  sliderImage.src = images[currentIndex]
+  // slideNumber.textContent = String(currentIndex + 1).padStart(2, "0")
+}
+
+// slideNumber.textContent = String(currentIndex + 1).padStart(2, "0")
+updateSlider()
 
 trainingsCards.forEach((card, index) => {
   card.addEventListener("click", () => {
