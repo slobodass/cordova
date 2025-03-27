@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+
   signOut
 } from "firebase/auth";
 
@@ -20,6 +21,7 @@ const authEmail = document.querySelector(".auth-email");
 const authPassword = document.querySelector(".auth-password");
 const modalTitle = document.querySelector(".modal_title");
 const modalText = document.querySelector(".modal_text");
+const errorMessage = document.querySelector("#error-message")
 
 const firebaseConfig = {
     apiKey: "AIzaSyC6NSFMcNA2F3SgoCodLUt53Rt6vlGmKXI",
@@ -54,7 +56,9 @@ formAuth.addEventListener('submit', async function (event) {
         console.log('Вход прошел успешно!');
         window.location.href = "index.html"
     } catch (error) {
-        console.error('Ошибка входа: ', error)
+        console.error('Ошибка входа: ', error);
+        errorMessage.textContent = "Неверный пароль или email"
+        errorMessage.style.display = "block"
     }
 })
 
@@ -91,4 +95,3 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  
