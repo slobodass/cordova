@@ -445,8 +445,6 @@ body {
   margin-bottom: 20px;
 }
 
-@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {}
-
 @media screen and (max-width: 768px) {
   .app {
     background: #000;
