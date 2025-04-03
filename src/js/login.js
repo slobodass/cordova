@@ -70,6 +70,7 @@ loginTab.addEventListener('click', () => {
     // active - изменение цвета эл-та
     registerTab.classList.remove('active');
     loginForm.style.display = 'block';
+    formAuth.style.display = "flex";
     registerForm.style.display = 'none';
 });
 
@@ -77,6 +78,7 @@ registerTab.addEventListener('click', () => {
     registerTab.classList.add('active');
     loginTab.classList.remove('active');
     loginForm.style.display = 'none';
+    formRegistration.style.display = "flex";
     registerForm.style.display = 'block';
 });
 
