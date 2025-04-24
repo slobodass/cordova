@@ -26,6 +26,10 @@ const authPassword = document.querySelector(".auth-password");
 const modalTitle = document.querySelector(".modal_title");
 const modalText = document.querySelector(".modal_text");
 const logoutBtn = document.querySelector('.logout-btn')
+const subscriptionButton = document.querySelector(".sign-up")
+const subscriptionModal = document.querySelector(".modal-subscription")
+const modalSubscriptionCloseButton = document.querySelector(".modal-subscription__close-button")
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyC6NSFMcNA2F3SgoCodLUt53Rt6vlGmKXI",
@@ -191,3 +195,18 @@ trainingsModal.addEventListener("click", (event) => {
 });
 
 logoutBtn.addEventListener('click', logout)
+subscriptionButton.addEventListener('click', function(){
+  subscriptionModal.classList.add("modal_active")
+})
+
+
+modalSubscriptionCloseButton.addEventListener('click', function(){
+  subscriptionModal.classList.remove("modal_active")
+})
+
+
+subscriptionModal.addEventListener("click", (event) => {
+  if (event.target === subscriptionModal) {
+    subscriptionModal.classList.remove("modal_active");
+  }
+});
