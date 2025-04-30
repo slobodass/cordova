@@ -16,16 +16,5 @@
         <icon src="./src/img/icon.png" density="xhdpi" />
         <icon src="./src/img/icon.png" density="xxhdpi" />
         <icon src="./src/img/icon.png" density="xxxhdpi" />
-
-        <!-- Заставки -->
-        <splash src="res/splash/android/preview.png" density="mdpi"/>
-        <splash src="res/splash/android/preview.png" density="hdpi"/>
-        <splash src="res/splash/android/preview.png" density="xhdpi"/>
-        <splash src="res/splash/android/preview.png" density="xxhdpi"/>
-        <splash src="res/splash/android/preview.png" density="xxxhdpi"/>
     </platform>
-
-        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="@drawable/splash" />        
-        <preference name="AndroidWindowSplashScreenBackgroundColor" value="#ffffff" />
-        <preference name="AndroidWindowSplashScreenDuration" value="3000" /> 
 </widget>

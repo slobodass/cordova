@@ -11,7 +11,7 @@ import {
   onAuthStateChanged,
   signOut
 } from "firebase/auth";
-
+import Inputmask from "inputmask";
 
 const loginTab = document.getElementById("login-tab");
 const registerTab = document.getElementById("register-tab");
@@ -29,6 +29,23 @@ const logoutBtn = document.querySelector('.logout-btn')
 const subscriptionButton = document.querySelector(".sign-up")
 const subscriptionModal = document.querySelector(".modal-subscription")
 const modalSubscriptionCloseButton = document.querySelector(".modal-subscription__close-button")
+const abonementButton = document.querySelector(".abonement-button")
+const modalBooking = document.querySelector('.modal-booking')
+const modalBookingCloseButton = document.querySelector(".modal-booking__close-button")
+// const inputPhone = document.querySelector("#phone")
+
+document.addEventListener('DOMContentLoaded', () => {
+  const inputPhone = document.querySelector('#phone');
+  if (inputPhone) {
+    const mask = new Inputmask({
+      mask: '+7 (999) 999-99-99',
+      showMaskOnHover: true,
+      showMaskOnFocus: true,
+      placeholder: '_', 
+    });
+    mask.mask(inputPhone);
+  }
+});
 
 
 const firebaseConfig = {
@@ -59,7 +76,7 @@ function onDeviceReady() {
 }
 
 const trainingsCards = document.querySelectorAll(".trainings__item");
-const trainingsModal = document.querySelector(".modal");
+const trainingsModal = document.querySelector(".modal-trainings");
 const modalCloseButton = document.querySelector(".modal__button-close");
 
 const cardData = [
@@ -136,12 +153,17 @@ function updateSlider() {
 // slideNumber.textContent = String(currentIndex + 1).padStart(2, "0")
 updateSlider()
 
+
 trainingsCards.forEach((card, index) => {
   card.addEventListener("click", () => {
     modalTitle.textContent = cardData[index].title;
     modalText.textContent = cardData[index].description;
-
     trainingsModal.classList.add("modal_active");
+
+    const bookingButton = document.querySelector(".booking-button")
+    bookingButton.addEventListener("click", () => {
+      modalBooking.classList.add("modal_active");
+    })
   });
 });
 
@@ -197,12 +219,17 @@ trainingsModal.addEventListener("click", (event) => {
 logoutBtn.addEventListener('click', logout)
 subscriptionButton.addEventListener('click', function(){
   subscriptionModal.classList.add("modal_active")
-})
+});
+
+abonementButton.addEventListener('click', function(){
+  subscriptionModal.classList.add("modal_active")
+});
+
 
 
 modalSubscriptionCloseButton.addEventListener('click', function(){
   subscriptionModal.classList.remove("modal_active")
-})
+});
 
 
 subscriptionModal.addEventListener("click", (event) => {
@@ -210,3 +237,16 @@ subscriptionModal.addEventListener("click", (event) => {
     subscriptionModal.classList.remove("modal_active");
   }
 });
+
+modalBookingCloseButton.addEventListener('click', function(){
+  modalBooking.classList.remove("modal_active")
+});
+
+modalBooking.addEventListener("click", (event) => {
+  if (event.target === modalBooking) {
+    modalBooking.classList.remove("modal_active");
+  }
+});
+
+const mask = new Inputmask("+7(999) 999-99-99")
+mask.mask(inputPhone)

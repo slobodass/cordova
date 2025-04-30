@@ -403,7 +403,7 @@
                                         <a class="footer_navigation-link" href="#">Контакты</a>
                                     </li>
                                     <li class="footer_navigation-item">
-                                        <a class="footer_navigation-link" href="#">Получить карту</a>
+                                        <p class="footer_navigation-link abonement-button">Получить карту</p>
                                     </li>
                                 </ul>
                             </nav>
@@ -423,24 +423,38 @@
                     </div>
                 </footer>
 
-                <div class="modal">
+                <div class="modal modal-trainings">
                     <div class="modal_content">
                         <h3 class="modal_title"></h3>
                         <p class="modal_text"></p>
-                        <button class="modal_button">Бронировать</button>
+                        <button class="modal_button booking-button">Бронировать</button>
                         <button class="modal__button-close">x</button>
                     </div>
                 </div>
-                <div class="modal-subscription">
-                    <div class="modal-subscription__content modal_content">
+
+                <div class="modal modal-subscription">
+                    <div class="modal_content">
                         <h4 class="modal-subscription__title">Карта с 100% CASH-BACK и персональная скидка до 45%</h4>
                         <p class="modal-subscription__subtitle">Введите свои контакты и мы вам перезвоним</p>
                         <form>
-                            <input type="text" placeholder="Ваше имя">
-                            <input type="number" placeholder="(999) 999-99-99">
+                            <input class="modal-input" type="text" placeholder="Ваше имя">
+                            <input class="modal-input" type="number" placeholder="(999) 999-99-99">
+                            <span class="modal-input__error">Обязательное поле</span>
                             <button class="modal-subscription__button">Забрать свою карту</button>
                         </form>
-                        <button class="modal-subscription__close-button">X</button>
+                        <button class="modal__close-button modal-subscription__close-button">X</button>
+                    </div>
+                </div>
+                
+                <div class="modal modal-booking">
+                    <div class="modal_content">
+                        <h5 class="modal-subscription__subtitle">Забронировать тренировку</h5>
+                        <form>
+                            <input class="modal-input" type="text" placeholder="Ваше имя">
+                            <input class="modal-input" type="text" id="phone" >
+                            <button class="modal-subscription__button">Забронировать</button>
+                        </form>
+                        <button class="modal__close-button modal-booking__close-button">X</button>
                     </div>
                 </div>
             </div>
