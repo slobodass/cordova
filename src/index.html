@@ -436,11 +436,11 @@
                     <div class="modal_content">
                         <h4 class="modal-subscription__title">Карта с 100% CASH-BACK и персональная скидка до 45%</h4>
                         <p class="modal-subscription__subtitle">Введите свои контакты и мы вам перезвоним</p>
-                        <form>
-                            <input class="modal-input" type="text" placeholder="Ваше имя">
-                            <input class="modal-input" type="number" placeholder="(999) 999-99-99">
-                            <span class="modal-input__error">Обязательное поле</span>
-                            <button class="modal-subscription__button">Забрать свою карту</button>
+                        <form class="modal-form" action="https://formspree.io/f/mpwdqenl" method="POST">
+                            <input class="modal-input" type="text" placeholder="Ваше имя" name="name">
+                            <input class="phone-input modal-input" type="text" name="phone">
+                            <span class="modal-input__error"></span>
+                            <button type="submit" class="modal-subscription__button">Забрать свою карту</button>
                         </form>
                         <button class="modal__close-button modal-subscription__close-button">X</button>
                     </div>
@@ -449,10 +449,11 @@
                 <div class="modal modal-booking">
                     <div class="modal_content">
                         <h5 class="modal-subscription__subtitle">Забронировать тренировку</h5>
-                        <form>
-                            <input class="modal-input" type="text" placeholder="Ваше имя">
-                            <input class="modal-input" type="text" id="phone" >
-                            <button class="modal-subscription__button">Забронировать</button>
+                        <form class="modal-form" action="https://formspree.io/f/mpwdqenl" method="POST">
+                            <input class="modal-input" type="text" placeholder="Ваше имя" name="name">
+                            <input class="phone-input modal-input input-element" type="text" name="phone" autocomplete="off">
+                            <span class="modal-input__error"></span>
+                            <button type="submit" class="modal-subscription__button">Забронировать</button>
                         </form>
                         <button class="modal__close-button modal-booking__close-button">X</button>
                     </div>

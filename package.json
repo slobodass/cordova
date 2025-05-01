@@ -41,6 +41,7 @@
     }
   },
   "dependencies": {
+    "cleave.js": "^1.6.0",
     "firebase": "^11.3.1",
     "inputmask": "^5.0.9",
     "swiper": "^11.2.4"

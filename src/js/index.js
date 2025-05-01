@@ -32,19 +32,24 @@ const modalSubscriptionCloseButton = document.querySelector(".modal-subscription
 const abonementButton = document.querySelector(".abonement-button")
 const modalBooking = document.querySelector('.modal-booking')
 const modalBookingCloseButton = document.querySelector(".modal-booking__close-button")
-// const inputPhone = document.querySelector("#phone")
+const forms = document.querySelectorAll(".modal-form")
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  const inputPhone = document.querySelector('#phone');
-  if (inputPhone) {
+  const phoneInputs = document.querySelectorAll('.phone-input');
+  if (phoneInputs) {
     const mask = new Inputmask({
       mask: '+7 (999) 999-99-99',
       showMaskOnHover: true,
       showMaskOnFocus: true,
       placeholder: '_', 
     });
-    mask.mask(inputPhone);
+    
+    phoneInputs.forEach(input => {
+      mask.mask(input)
+    })
   }
+
 });
 
 
@@ -167,6 +172,31 @@ trainingsCards.forEach((card, index) => {
   });
 });
 
+forms.forEach(form => {
+  const inputs = form.querySelectorAll(".modal-input")
+  const errorSpan = form.querySelector(".modal-input__error")
+
+  form.addEventListener('submit', function (event){
+    let isValid = true
+    errorSpan.textContent = ""
+
+    inputs.forEach(input => {
+      if(input.value.trim() === "") {
+         isValid = false
+         input.classList.add("input-error");
+      } else{
+        input.classList.remove("input-error")
+      }
+    })
+
+    if (!isValid){
+      event.preventDefault();
+      errorSpan.textContent = 'Пожалуйста, заполните все поля'
+    }
+
+  })
+})
+
 const swiper = new Swiper(".swiper-container", {
   loop: true,
   slidesPerView: 3,
@@ -248,5 +278,4 @@ modalBooking.addEventListener("click", (event) => {
   }
 });
 
-const mask = new Inputmask("+7(999) 999-99-99")
-mask.mask(inputPhone)
+

@@ -322,8 +322,9 @@ body {
 .modal-input{
   border: none;
   border-bottom: 1px #fff solid;
-  background-color: wheat;
+  background-color: transparent;
   border-radius: 0px;
+  color: #fff;
 }
 
 .modal_content {
@@ -928,5 +929,9 @@ button {
 }
 
 .input-error{
-  border: red 1px solid;
+  border: red 3px solid;
+}
+
+.modal-input__error{
+  color: red;
 }
