@@ -158,6 +158,36 @@ function updateSlider() {
 // slideNumber.textContent = String(currentIndex + 1).padStart(2, "0")
 updateSlider()
 
+const form = document.getElementById('booking-form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); 
+
+  const formData = new FormData(form);
+
+  fetch("https://formspree.io/f/mpwdqenl", {
+    method: "POST",
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("Данные успешно отправлены!");
+      form.reset(); 
+    } else {
+      response.json().then(data => {
+        alert("Ошибка: " + (data.error || "Неизвестная ошибка."));
+      });
+    }
+  })
+  .catch(error => {
+    console.error("Сетевая ошибка:", error);
+    alert("Сетевая ошибка. Попробуйте позже.");
+  });
+});
+
 
 trainingsCards.forEach((card, index) => {
   card.addEventListener("click", () => {
