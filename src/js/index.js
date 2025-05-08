@@ -9,9 +9,15 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
-  signOut
+  signOut,
 } from "firebase/auth";
 import Inputmask from "inputmask";
+import elina from "@/img/Elina.jpg";
+import konstantin from "@/img/Konstantin.jpg";
+import nikolai from "@/img/Nikolai.jpg";
+import uri from "@/img/Uri.jpg";
+import natalia from "@/img/Natalia.jpg";
+import vyacheslav from "@/img/Vyacheslav.jpg";
 
 const loginTab = document.getElementById("login-tab");
 const registerTab = document.getElementById("register-tab");
@@ -25,33 +31,52 @@ const authEmail = document.querySelector(".auth-email");
 const authPassword = document.querySelector(".auth-password");
 const modalTitle = document.querySelector(".modal_title");
 const modalText = document.querySelector(".modal_text");
-const logoutBtn = document.querySelector('.logout-btn')
-const subscriptionButton = document.querySelector(".sign-up")
-const subscriptionModal = document.querySelector(".modal-subscription")
-const modalSubscriptionCloseButton = document.querySelector(".modal-subscription__close-button")
-const abonementButton = document.querySelector(".abonement-button")
-const modalBooking = document.querySelector('.modal-booking')
-const modalBookingCloseButton = document.querySelector(".modal-booking__close-button")
-const forms = document.querySelectorAll(".modal-form")
+const logoutBtn = document.querySelector(".logout-btn");
+const subscriptionButton = document.querySelector(".sign-up");
+const subscriptionModal = document.querySelector(".modal-subscription");
+const modalSubscriptionCloseButton = document.querySelector(
+  ".modal-subscription__close-button"
+);
+const abonementButton = document.querySelector(".abonement-button");
+const modalBooking = document.querySelector(".modal-booking");
+const modalBookingCloseButton = document.querySelector(
+  ".modal-booking__close-button"
+);
+const forms = document.querySelectorAll(".modal-form");
 
+const trainers = [
+  { selector: ".trainer-1", image: elina },
+  { selector: ".trainer-2", image: konstantin },
+  { selector: ".trainer-3", image: elina },
+  { selector: ".trainer-4", image: nikolai },
+  { selector: ".trainer-5", image: uri },
+  { selector: ".trainer-6", image: natalia },
+  { selector: ".trainer-7", image: vyacheslav },
+  { selector: ".trainer-8", image: vyacheslav },
+];
 
-document.addEventListener('DOMContentLoaded', () => {
-  const phoneInputs = document.querySelectorAll('.phone-input');
-  if (phoneInputs) {
-    const mask = new Inputmask({
-      mask: '+7 (999) 999-99-99',
-      showMaskOnHover: true,
-      showMaskOnFocus: true,
-      placeholder: '_', 
-    });
-    
-    phoneInputs.forEach(input => {
-      mask.mask(input)
-    })
+trainers.forEach(({ selector, image }) => {
+  const el = document.querySelector(selector);
+  if (el) {
+    el.style.backgroundImage = `url(${image})`;
   }
-
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const phoneInputs = document.querySelectorAll(".phone-input");
+  if (phoneInputs) {
+    const mask = new Inputmask({
+      mask: "+7 (999) 999-99-99",
+      showMaskOnHover: true,
+      showMaskOnFocus: true,
+      placeholder: "_",
+    });
+
+    phoneInputs.forEach((input) => {
+      mask.mask(input);
+    });
+  }
+});
 
 const firebaseConfig = {
   apiKey: "AIzaSyC6NSFMcNA2F3SgoCodLUt53Rt6vlGmKXI",
@@ -65,12 +90,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const auth = getAuth();
 
   onAuthStateChanged(auth, (user) => {
     if (!user) {
-      window.location.href = 'login.html';
+      window.location.href = "login.html";
     }
   });
 });
@@ -132,36 +157,44 @@ const cardData = [
   },
 ];
 
-
-const images = ["https://optim.tildacdn.com/tild3833-3962-4766-a236-306363663437/-/format/webp/DSC01560-01.jpg", "https://static.tildacdn.com/tild6363-3338-4436-b035-313961303464/DSC015612.jpg", "https://static.tildacdn.com/tild3834-3131-4862-a363-306364333639/DSC01622.jpg", "https://static.tildacdn.com/tild3262-6337-4532-a562-643363663239/DSC01755.jpg", "https://static.tildacdn.com/tild6132-6135-4561-b562-663461633832/photo.jpg", "https://static.tildacdn.com/tild3430-3663-4265-a166-313130323235/DSC01587.jpg", "https://static.tildacdn.com/tild3733-3562-4966-a461-666138313864/DSC01679.jpg", "https://static.tildacdn.com/tild3735-3537-4830-a138-653538336337/DSC01640.jpg"]
-const sliderImage = document.querySelector(".slider-image")
-const slideNumber = document.querySelector(".slide-number")
-const totalSlide = document.querySelector(".totla-slide")
-const prevBtn = document.querySelector(".prev-btn")
-const nextBtn = document.querySelector(".next-btn")
-let currentIndex = 0
+const images = [
+  "https://optim.tildacdn.com/tild3833-3962-4766-a236-306363663437/-/format/webp/DSC01560-01.jpg",
+  "https://static.tildacdn.com/tild6363-3338-4436-b035-313961303464/DSC015612.jpg",
+  "https://static.tildacdn.com/tild3834-3131-4862-a363-306364333639/DSC01622.jpg",
+  "https://static.tildacdn.com/tild3262-6337-4532-a562-643363663239/DSC01755.jpg",
+  "https://static.tildacdn.com/tild6132-6135-4561-b562-663461633832/photo.jpg",
+  "https://static.tildacdn.com/tild3430-3663-4265-a166-313130323235/DSC01587.jpg",
+  "https://static.tildacdn.com/tild3733-3562-4966-a461-666138313864/DSC01679.jpg",
+  "https://static.tildacdn.com/tild3735-3537-4830-a138-653538336337/DSC01640.jpg",
+];
+const sliderImage = document.querySelector(".slider-image");
+const slideNumber = document.querySelector(".slide-number");
+const totalSlide = document.querySelector(".totla-slide");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+let currentIndex = 0;
 
 prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1
-  updateSlider()
-})
+  currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+  updateSlider();
+});
 nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-  updateSlider()
-})
+  currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+  updateSlider();
+});
 
 function updateSlider() {
-  sliderImage.src = images[currentIndex]
+  sliderImage.src = images[currentIndex];
   // slideNumber.textContent = String(currentIndex + 1).padStart(2, "0")
 }
 
 // slideNumber.textContent = String(currentIndex + 1).padStart(2, "0")
-updateSlider()
+updateSlider();
 
-const form = document.getElementById('booking-form');
+const form = document.getElementById("booking-form");
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault(); 
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
   const formData = new FormData(form);
 
@@ -169,25 +202,24 @@ form.addEventListener('submit', function (e) {
     method: "POST",
     body: formData,
     headers: {
-      'Accept': 'application/json'
-    }
+      Accept: "application/json",
+    },
   })
-  .then(response => {
-    if (response.ok) {
-      alert("Данные успешно отправлены!");
-      form.reset(); 
-    } else {
-      response.json().then(data => {
-        alert("Ошибка: " + (data.error || "Неизвестная ошибка."));
-      });
-    }
-  })
-  .catch(error => {
-    console.error("Сетевая ошибка:", error);
-    alert("Сетевая ошибка. Попробуйте позже.");
-  });
+    .then((response) => {
+      if (response.ok) {
+        alert("Данные успешно отправлены!");
+        form.reset();
+      } else {
+        response.json().then((data) => {
+          alert("Ошибка: " + (data.error || "Неизвестная ошибка."));
+        });
+      }
+    })
+    .catch((error) => {
+      console.error("Сетевая ошибка:", error);
+      alert("Сетевая ошибка. Попробуйте позже.");
+    });
 });
-
 
 trainingsCards.forEach((card, index) => {
   card.addEventListener("click", () => {
@@ -195,37 +227,36 @@ trainingsCards.forEach((card, index) => {
     modalText.textContent = cardData[index].description;
     trainingsModal.classList.add("modal_active");
 
-    const bookingButton = document.querySelector(".booking-button")
+    const bookingButton = document.querySelector(".booking-button");
     bookingButton.addEventListener("click", () => {
       modalBooking.classList.add("modal_active");
-    })
+    });
   });
 });
 
-forms.forEach(form => {
-  const inputs = form.querySelectorAll(".modal-input")
-  const errorSpan = form.querySelector(".modal-input__error")
+forms.forEach((form) => {
+  const inputs = form.querySelectorAll(".modal-input");
+  const errorSpan = form.querySelector(".modal-input__error");
 
-  form.addEventListener('submit', function (event){
-    let isValid = true
-    errorSpan.textContent = ""
+  form.addEventListener("submit", function (event) {
+    let isValid = true;
+    errorSpan.textContent = "";
 
-    inputs.forEach(input => {
-      if(input.value.trim() === "") {
-         isValid = false
-         input.classList.add("input-error");
-      } else{
-        input.classList.remove("input-error")
+    inputs.forEach((input) => {
+      if (input.value.trim() === "") {
+        isValid = false;
+        input.classList.add("input-error");
+      } else {
+        input.classList.remove("input-error");
       }
-    })
+    });
 
-    if (!isValid){
+    if (!isValid) {
       event.preventDefault();
-      errorSpan.textContent = 'Пожалуйста, заполните все поля'
+      errorSpan.textContent = "Пожалуйста, заполните все поля";
     }
-
-  })
-})
+  });
+});
 
 const swiper = new Swiper(".swiper-container", {
   loop: true,
@@ -256,14 +287,13 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function logout() {
   signOut(auth)
     .then(() => {
-      console.log('Выход выполнен успешно');
-      window.location.href = 'login.html';
+      console.log("Выход выполнен успешно");
+      window.location.href = "login.html";
     })
     .catch((error) => {
-      console.error('Ошибка при выходе: ', error)
-    })
+      console.error("Ошибка при выходе: ", error);
+    });
 }
-
 
 // крестик закрывает окно
 modalCloseButton.addEventListener("click", () => {
@@ -276,21 +306,18 @@ trainingsModal.addEventListener("click", (event) => {
   }
 });
 
-logoutBtn.addEventListener('click', logout)
-subscriptionButton.addEventListener('click', function(){
-  subscriptionModal.classList.add("modal_active")
+logoutBtn.addEventListener("click", logout);
+subscriptionButton.addEventListener("click", function () {
+  subscriptionModal.classList.add("modal_active");
 });
 
-abonementButton.addEventListener('click', function(){
-  subscriptionModal.classList.add("modal_active")
+abonementButton.addEventListener("click", function () {
+  subscriptionModal.classList.add("modal_active");
 });
 
-
-
-modalSubscriptionCloseButton.addEventListener('click', function(){
-  subscriptionModal.classList.remove("modal_active")
+modalSubscriptionCloseButton.addEventListener("click", function () {
+  subscriptionModal.classList.remove("modal_active");
 });
-
 
 subscriptionModal.addEventListener("click", (event) => {
   if (event.target === subscriptionModal) {
@@ -298,8 +325,8 @@ subscriptionModal.addEventListener("click", (event) => {
   }
 });
 
-modalBookingCloseButton.addEventListener('click', function(){
-  modalBooking.classList.remove("modal_active")
+modalBookingCloseButton.addEventListener("click", function () {
+  modalBooking.classList.remove("modal_active");
 });
 
 modalBooking.addEventListener("click", (event) => {
@@ -307,5 +334,3 @@ modalBooking.addEventListener("click", (event) => {
     modalBooking.classList.remove("modal_active");
   }
 });
-
-

@@ -4,12 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0,
-      0,
-      0,
-      0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
@@ -60,7 +56,7 @@ img {
 body {
   background-color: #151515;
   color: #fff;
-  font-family: "Montserrat", 'Arial', sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   min-height: 100vh;
 }
 
@@ -208,6 +204,7 @@ body {
   width: 400px;
   height: 550px;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -319,7 +316,7 @@ body {
   transition: opacity 0.7s ease, visibility 0.7s ease;
 }
 
-.modal-input{
+.modal-input {
   border: none;
   border-bottom: 1px #fff solid;
   background-color: transparent;
@@ -338,7 +335,6 @@ body {
   transition: transform 0.7s ease;
   position: relative;
 }
-
 
 .modal_button {
   border-radius: 8px;
@@ -455,7 +451,7 @@ body {
   transform: translateY(0);
 }
 
-.modal__close-button{
+.modal__close-button {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -463,8 +459,10 @@ body {
 }
 
 .interiers__title-mobile {
-  overflow: hidden;
-  opacity: 0;
+  display: none;
+  font-size: 30px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -544,46 +542,31 @@ body {
   }
 
   .slider-content {
-    flex-direction: column;
-    /* height: auto !important; */
+    flex-direction: column-reverse;
+    height: auto !important;
   }
 
   .interiers__title-mobile {
-    overflow: visible;
-    opacity: 1;
-    order: 1;
+    display: block;
   }
 
   .slide-info {
-    order: 3;
     flex-direction: column !important;
     align-items: center;
     justify-content: center;
   }
 
   .interiers__title {
-    overflow: hidden;
-    opacity: 0;
+    display: none;
   }
 
-  /* .slide-info > div:first-child {
-    order: 2;
-    margin: 8px 0;
-  } */
-
   .image-container {
-    order: 2;
     width: 100%;
   }
 
   .interiers {
     margin: 0 0 100px 0;
   }
-
-  /* .slider-controls {
-    order: 4;
-    margin: 12px 0 0 0;
-  } */
 
   .trainers {
     overflow: hidden;
@@ -749,7 +732,6 @@ body {
   }
 }
 
-
 .container {
   width: 100%;
   max-width: 400px;
@@ -826,11 +808,9 @@ button {
   font-family: "Montserrat";
 }
 
-
 .form__title {
   color: #151515;
 }
-
 
 .logout-btn {
   width: 20px;
@@ -844,7 +824,6 @@ button {
   height: 20px;
 }
 
-
 .trainings {
   background-image: url(https://optim.tildacdn.com/tild6231-3863-4662-a363-613935666638/-/format/webp/girl2.png);
   background-repeat: no-repeat;
@@ -852,7 +831,6 @@ button {
   background-position: 600px 160px;
   margin-bottom: 20px;
 }
-
 
 .mission {
   text-align: center;
@@ -877,7 +855,7 @@ button {
 }
 
 .mission_presentation {
-  background-color: #1F5BFF;
+  background-color: #1f5bff;
   padding: 20px 30px;
   border-radius: 30px;
 }
@@ -902,7 +880,7 @@ button {
   height: 100%;
 }
 
-.interiers{
+.interiers {
   overflow: hidden;
 }
 
@@ -934,51 +912,25 @@ button {
   cursor: pointer;
 }
 
-
-.modal-subscription__title{
+.modal-subscription__title {
   font-size: 30px;
 }
 
-.modal-subscription__subtitle{
+.modal-subscription__subtitle {
   margin: 10px;
   font-size: 20px;
 }
 
-.modal-subscription__button{
+.modal-subscription__button {
   background-color: #fecb09;
-  color:#151515;
+  color: #151515;
   font-weight: 600;
 }
 
-.trainer-1{
-  background-image: url(/src/img/Vyacheslav.jpg);
-}
-.trainer-2{
-  background-image: url(/src/img/Konstantin.jpg);
-}
-.trainer-3{
-  background-image: url(/src/img/Elina.jpg);
-}
-.trainer-4{
-  background-image: url(/src/img/Nikolai.jpg);
-}
-.trainer-5{
-  background-image: url(/src/img/Uri.jpg);
-}
-.trainer-6{
-  background-image: url(/src/img/Natalia.jpg);
-}
-.trainer-7{
-  background-image: url(/src/img/Vyacheslav.jpg);
-}
-.trainer-8{
-  background-image: url(/src/img/Vyacheslav.jpg);
-}
-
-.input-error{
+.input-error {
   border: red 3px solid;
 }
 
-.modal-input__error{
+.modal-input__error {
   color: red;
 }
