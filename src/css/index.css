@@ -462,6 +462,11 @@ body {
   color: #fecb09;
 }
 
+.interiers__title-mobile {
+  overflow: hidden;
+  opacity: 0;
+}
+
 @media screen and (max-width: 768px) {
   .app {
     background: #000;
@@ -537,6 +542,48 @@ body {
     margin-top: 10px;
     font-size: 12px;
   }
+
+  .slider-content {
+    flex-direction: column;
+    /* height: auto !important; */
+  }
+
+  .interiers__title-mobile {
+    overflow: visible;
+    opacity: 1;
+    order: 1;
+  }
+
+  .slide-info {
+    order: 3;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .interiers__title {
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  /* .slide-info > div:first-child {
+    order: 2;
+    margin: 8px 0;
+  } */
+
+  .image-container {
+    order: 2;
+    width: 100%;
+  }
+
+  .interiers {
+    margin: 0 0 100px 0;
+  }
+
+  /* .slider-controls {
+    order: 4;
+    margin: 12px 0 0 0;
+  } */
 
   .trainers {
     overflow: hidden;
