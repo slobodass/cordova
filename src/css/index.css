@@ -587,6 +587,10 @@ body {
     margin: 0;
   }
 
+.fight-club__right{
+  display: none;
+}
+
   .footer__info {
     width: 100%;
     max-width: 760px;
@@ -933,4 +937,70 @@ button {
 
 .modal-input__error {
   color: red;
+}
+
+.fight-club {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  margin: 0 auto 100px auto;
+}
+
+
+.fight-club__left {
+  max-width: 600px;
+}
+
+.fight-club__title {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.fight-club__discription {
+  font-size: 18px;
+  color: #8F9299;
+  margin-bottom: 40px;
+}
+
+.fight-club__booking {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.fight-club__input {
+  background-color: inherit;
+  border: none;
+  border-bottom: white 1px solid;
+  border-radius: 0px;
+}
+
+.fight-club__button {
+  color: #101010;
+  border-radius: 2px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #fecb09;
+  padding: 0px 15px;
+  display: block;
+  width: 230px;
+  font-weight: 700;
+  height: 50px;
+}
+
+.fight-club__text{
+  line-height: 22px;
+  color: #8f9299;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.fight-club__link{
+  outline: none;
+  color: #ff8562;
+  text-decoration: none;
+}
+
+.fight-club__button-wrapper{
+  display: flex;
+  gap: 30px;
 }
