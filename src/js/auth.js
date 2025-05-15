@@ -1,14 +1,14 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";  //авторизация
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-} from "firebase/auth";
+} from "firebase/auth";  //
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC6NSFMcNA2F3SgoCodLUt53Rt6vlGmKXI",
+  apiKey: "AIzaSyC6NSFMcNA2F3SgoCodLUt53Rt6vlGmKXI",   
   authDomain: "sf-app-database.firebaseapp.com",
   projectId: "sf-app-database",
   storageBucket: "sf-app-database.firebasestorage.app",

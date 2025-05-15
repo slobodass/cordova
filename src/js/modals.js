@@ -63,13 +63,6 @@ export function setupModals() {
   const modalTitle = document.querySelector(".modal_title");
   const modalText = document.querySelector(".modal_text");
 
-  console.log("subscriptionButton:", subscriptionButton);
-  console.log("abonementButton:", abonementButton);
-  console.log("trainingsCards:", trainingsCards);
-  console.log("subscriptionModal:", subscriptionModal);
-  console.log("modalBooking:", modalBooking);
-  console.log("trainingsModal:", trainingsModal);
-
   trainingsCards.forEach((card, index) => {
     card.addEventListener("click", () => {
       modalTitle.textContent = cardData[index].title;
