@@ -465,277 +465,6 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-  .app {
-    background: #000;
-  }
-
-  .page {
-    max-width: 768px;
-    padding: 0 35px;
-  }
-
-  .header__nav {
-    padding: 0 10px;
-  }
-
-  .header__logo {
-    width: 160px;
-  }
-
-  .sign-up {
-    font-size: 14px;
-    padding: 11px 7px;
-    margin-left: 7px;
-  }
-
-  .header__links {
-    margin: 0;
-  }
-
-  .header__list {
-    gap: 30px;
-  }
-
-  .header__links :not(:last-child) {
-    margin-right: 0px;
-  }
-
-  .for-you {
-    display: block;
-    padding: 90px 40px 40px 40px;
-  }
-
-  .for-you__pic {
-    width: 489px;
-    margin-left: 100px;
-  }
-
-  .why-us {
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 60px;
-  }
-
-  .why-us__pic {
-    width: 222px;
-    height: 400px;
-  }
-
-  .why-us__wrapper-text {
-    font-size: 34px;
-  }
-
-  .why-us__list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 35px;
-  }
-
-  .why-us__item-img {
-    width: 50px;
-  }
-
-  .why-us__item-text {
-    margin-top: 10px;
-    font-size: 12px;
-  }
-
-  .slider-content {
-    flex-direction: column-reverse;
-    height: auto !important;
-  }
-
-  .interiers__title-mobile {
-    display: block;
-  }
-
-  .slide-info {
-    flex-direction: column !important;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .interiers__title {
-    display: none;
-  }
-
-  .image-container {
-    width: 100%;
-  }
-
-  .interiers {
-    margin: 0 0 100px 0;
-  }
-
-  .trainers {
-    overflow: hidden;
-    margin: 0 0 60px 0;
-  }
-
-  .trainings__list {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 760px;
-    margin: 0 auto;
-  }
-
-  .trainings__card {
-    font-size: 24px;
-    width: 355px;
-    height: 230px;
-    background-size: 100%;
-    margin: 0;
-  }
-
-.fight-club__right{
-  display: none;
-}
-
-  .footer__info {
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 50px 22px;
-  }
-
-  .footer_navigation-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    list-style: none;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .page {
-    max-width: 640px;
-    padding: 0;
-  }
-
-  .trainer__card {
-    width: 310px;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-  }
-
-  .trainings__list {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  .trainings__card {
-    font-size: 24px;
-    width: 310px;
-    height: 230px;
-    background-size: 100%;
-    margin: 0;
-  }
-
-  .modal_content {
-    padding: 20px;
-    max-width: 640px;
-    width: 90%;
-  }
-
-  .modal_text {
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .page {
-    max-width: 480px;
-    padding: 0;
-  }
-
-  .header__list {
-    display: block;
-  }
-
-  .for-you {
-    display: block;
-    padding: 0;
-    margin: 40px 0 40px 0;
-  }
-
-  .for-you__text-wrapper {
-    width: 95%;
-  }
-
-  .for-you__title {
-    font-size: 47px;
-    text-align: center;
-  }
-
-  .for-you__subtitle {
-    font-size: 17px;
-    margin-top: 24px;
-    text-align: center;
-  }
-
-  .for-you__pic {
-    width: 90%;
-    margin: 30px auto 0 auto;
-    display: block;
-  }
-
-  .why-us__pic {
-    display: none;
-  }
-
-  .trainer__card {
-    background-image: url(https://optim.tildacdn.com/tild6265-6334-4936-a234-633139313331/-/format/webp/PozhilovaN.jpg);
-    width: 230px;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-  }
-
-  .trainings__card-text {
-    position: absolute;
-    top: 50px;
-    left: 82px;
-  }
-
-  .trainings__list {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  .trainings__card {
-    font-size: 24px;
-    width: 95%;
-    background-size: 100%;
-    margin: 0 auto;
-    background-size: contain;
-  }
-
-  .modal_content {
-    padding: 20px;
-    max-width: 480px;
-    width: 90%;
-  }
-
-  .modal_text {
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    text-align: center;
-  }
-}
-
 .container {
   width: 100%;
   max-width: 400px;
@@ -1004,4 +733,303 @@ button {
 .fight-club__button-wrapper{
   display: flex;
   gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    background: #000;
+  }
+
+  .page {
+    max-width: 768px;
+    padding: 0 35px;
+  }
+
+  .header__nav {
+    padding: 0 10px;
+  }
+
+  .header__logo {
+    width: 160px;
+  }
+
+  .sign-up {
+    font-size: 14px;
+    padding: 11px 7px;
+    margin-left: 7px;
+  }
+
+  .header__links {
+    margin: 0;
+  }
+
+  .header__list {
+    gap: 30px;
+  }
+
+  .header__links :not(:last-child) {
+    margin-right: 0px;
+  }
+
+  .for-you {
+    display: block;
+    padding: 90px 40px 40px 40px;
+  }
+
+  .for-you__pic {
+    width: 489px;
+    margin-left: 100px;
+  }
+
+  .why-us {
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .why-us__pic {
+    width: 222px;
+    height: 400px;
+  }
+
+  .why-us__wrapper-text {
+    font-size: 34px;
+  }
+
+  .why-us__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 35px;
+  }
+
+  .why-us__item-img {
+    width: 50px;
+  }
+
+  .why-us__item-text {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .slider-content {
+    flex-direction: column-reverse;
+    height: auto !important;
+  }
+
+  .interiers__title-mobile {
+    display: block;
+  }
+
+  .slide-info {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .interiers__title {
+    display: none;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+
+  .interiers {
+    margin: 0 0 100px 0;
+  }
+
+  .trainers {
+    overflow: hidden;
+    margin: 0 0 60px 0;
+  }
+
+  .trainings__list {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .trainings__card {
+    font-size: 24px;
+    width: 355px;
+    height: 230px;
+    background-size: 100%;
+    margin: 0;
+  }
+
+.fight-club__right{
+  display: none;
+}
+
+  .footer__info {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 50px 22px;
+  }
+
+  .footer_navigation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .page {
+    max-width: 640px;
+    padding: 0;
+  }
+
+  .trainer__card {
+    width: 310px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .trainings__list {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .trainings__card {
+    font-size: 24px;
+    width: 310px;
+    height: 230px;
+    background-size: 100%;
+    margin: 0;
+  }
+
+  .modal_content {
+    padding: 20px;
+    max-width: 640px;
+    width: 90%;
+  }
+
+  .modal_text {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .fight-club__button-wrapper{
+    gap: 0px;
+  }
+
+  .fight-club__button{
+    margin: 0 30px 0 0;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .page {
+    max-width: 480px;
+    padding: 0;
+  }
+
+  .header__list {
+    display: block;
+  }
+
+  .for-you {
+    display: block;
+    padding: 0;
+    margin: 40px 0 40px 0;
+  }
+
+  .for-you__text-wrapper {
+    width: 95%;
+  }
+
+  .for-you__title {
+    font-size: 47px;
+    text-align: center;
+  }
+
+  .for-you__subtitle {
+    font-size: 17px;
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .for-you__pic {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    display: block;
+  }
+
+  .why-us__pic {
+    display: none;
+  }
+
+  .trainer__card {
+    background-image: url(https://optim.tildacdn.com/tild6265-6334-4936-a234-633139313331/-/format/webp/PozhilovaN.jpg);
+    width: 230px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .trainings__card-text {
+    position: absolute;
+    top: 50px;
+    left: 82px;
+  }
+
+  .trainings__list {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .trainings__card {
+    font-size: 24px;
+    width: 95%;
+    background-size: 100%;
+    margin: 0 auto;
+    background-size: contain;
+  }
+
+  .modal_content {
+    padding: 20px;
+    max-width: 480px;
+    width: 90%;
+  }
+
+  .modal_text {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .fight-club__text{
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .fight-club__button-wrapper{
+    display: block;
+  }
+
+  .fight-club__button {
+  padding: 0px 15px;
+  width: 100%;
+  font-weight: 700;
+  height: 50px;
+  margin: 0 0 15px 0;
+}
 }
