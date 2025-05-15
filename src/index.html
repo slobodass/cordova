@@ -348,11 +348,12 @@
                         <div class="fight-club__left">
                             <h3 class="fight-club__title">Бойцовский клуб</h3>
                             <p class="fight-club__discription">В клубе организован бойцовский клуб по всем популярным направлениям единоборств: бокс, тайский бокс, ММА. В клубе функционирует зона для бокса и восьмиугольный ринг для ММА. Все ринги выполнены с соблюдением международных стандартов и норм и подходят для проведения официальных соревнований и турниров.</p>
-                            <form class="fight-club__form">
+                            <form class="fight-club__form" id="fight-club__form">
                                 <h3 class="fight-club__booking">Бронируй пробное занятие!</h3>
-                                <input class="fight-club__input" type="text" placeholder="Имя">
-                                <input class="fight-club__input" type="number" placeholder="+7(495)795-69-57">
+                                <input class="fight-club__input" type="text" placeholder="Имя" name="name">
+                                <input class="fight-club__input phone-input" type="text" name="phone" placeholder="+7(495)795-69-57" autocomplete="off">
                                 <div class="fight-club__button-wrapper">
+                                    <span class="modal-input__error"></span>
                                     <button class="fight-club__button">Бронируй тренировку</button>
                                     <p class="fight-club__text">Согласен с <a class="fight-club__link" href="https://sandowfitness.ru/policy" >политикой конфиденциальности</a> и обработкой персональных данных</p>
                                 </div>
@@ -422,7 +423,7 @@
                                         <a class="footer_navigation-link" href="#trainers">Тренеры</a>
                                     </li>
                                     <li class="footer_navigation-item">
-                                        <a class="footer_navigation-link" href="#">Контакты</a>
+                                        <a class="footer_navigation-link" href="#footer__adress">Контакты</a>
                                     </li>
                                     <li class="footer_navigation-item">
                                         <p class="footer_navigation-link abonement-button">Получить карту</p>
@@ -458,7 +459,7 @@
                     <div class="modal_content">
                         <h4 class="modal-subscription__title">Карта с 100% CASH-BACK и персональная скидка до 45%</h4>
                         <p class="modal-subscription__subtitle">Введите свои контакты и мы вам перезвоним</p>
-                        <form class="modal-form" action="https://formspree.io/f/mpwdqenl" method="POST">
+                        <form class="modal-form" id="sales-form">
                             <input class="modal-input" type="text" placeholder="Ваше имя" name="name">
                             <input class="phone-input modal-input" type="text" name="phone" autocomplete="off">
                             <input type="hidden" name="_next" value="index.html">

@@ -1,0 +1,123 @@
+const cardData = [
+  {
+    title: "Йога",
+    description:
+      "Йога - Традиционная йога, как духовная практика, плюс тщательно подобранный комплекс физических упражнений («асан») – вот что такое йога-классы в Sandow fitness! Призванные устранить эмоциональный стресс и физическую усталость после напряженного трудового дня, эти занятия заметно улучшат параметры здоровья — укрепят позвоночник, мышечный корсет, стабилизируют работу сердечно-сосудистой системы, нормализуют давление, снимут напряжение в плечах и спине. Занятия организованы в максимально удобное время!",
+  },
+  {
+    title: "Кросс-тренинг",
+    description:
+      "Кросс-тренинг - Супер популярный формат функционального фитнеса, для которого в Sanow fitness есть всё! Будь то подготовка к соревнованиям по кросс фиту под руководством сертифицированных тренеров, или просто улучшение таких параметров, как мышечная сила и выносливость, координация, баланс и скорость! Профессиональное оснащение и оборудование от официального партнера UFC Sport – компании Sparta Equipment! Занятия организованы в максимально удобное время!",
+  },
+  {
+    title: "Здоровая спина",
+    description:
+      "Здоровая спина - Программа «Здоровая спина», разработанная специалистами Sandow Fitness в рамках концепции «Активное долголетие» является одной из самых мягких разновидностей фитнеса, направленных на восстановление и профилактику болезней позвоночника за счет проработки мышц, удерживающих позвоночник в правильном положении. Упражнения предназначены для безопасного растягивания мышц и связок: они улучшат и восстановят подвижность позвоночника, снимут излишнее напряжение и расслабят малоподвижные участки спины. Специально подобранный комплекс упражнений на развитие подвижности и гибкости спины рекомендуется и мужчинам, и женщинам. Тренировки помогут тем, кто хочет сохранить позвоночник здоровым и улучшить осанку!",
+  },
+  {
+    title: "Dance hall",
+    description:
+      "Dance hall - Урок на основе базовых элементов популярных направлений street dance, хип-хоп, club dance, R&B. На занятиях под руководством профессиональных инструкторов- хореографов Вы почувствуете себя в круговороте зажигательных ритмов улиц Бронкса! Координация, выносливость, укрепление мышц, выплеск эмоций, хорошее времяпрепровождение в компании единомышленников — это лишь некоторые плюсы, которые несет в себе этот формат танцевального фитнеса в клубе Sandow!",
+  },
+  {
+    title: "Zumba",
+    description:
+      "Zumba - Хотите поразить своей танцевальной техникой на любой танцевальной площадке? Тогда фитнес программа Zumba - то, что Вам нужно! Это – энергичная зажигательная тренировка на основе латиноамериканских танцевальных базовых движений с элементами аэробики. Она включает в себя микс из таких активных танцев, как самба, хип-хоп, сальса, меренге, бачата, кумбия, фламенко и некоторых других. Интенсивность урока способствует раскрепощению тела, улучшению эмоционального фона и жиросжиганию до 600 Ккал. за одно занятие! Подходит для любого возраста!",
+  },
+  {
+    title: "Шпагат",
+    description:
+      "Шпагат - Урок направлен на достижение максимального уровня растяжки мышц ног, рекомендован для всех уровней подготовленности! При основном акценте на растяжку и шпагат улучшает и общую гибкость; все упражнения выполняются в фазе расслабления,что позволяет снять мышечное напряжение, привести в равновесие мысли, избавиться от стресса. Через некоторое время вы с удовольствием отметите, что походка стала легче, тело стало подтянутым, движения — пластичными. Позитивный заряд бодрости от специалистов по шпагату команды Sandow гарантирован!",
+  },
+  {
+    title: "Стретчинг",
+    description:
+      "Стретчинг - Стретчинг (от английского «stretching» – растягивание) — это система особых упражнений, направленная на развитие гибкости всего тела. Авторская программа от фитнес экспертов Sandow fitness включает зарекомендовавшую себя на практике комбинацию упражнений из динамического, изометрического и активного стретчинга, обеспечивающую правильную и безопасную последовательность напряжения, расслабления, растягивания и фиксирования мышц, обеспечивая также и улучшение подвижности суставов! Как бонусы от регулярных занятий стретчингом – предотвращение застоя в лимфатической системе; избавление от болей в поясничном отделе позвоночника; улучшению осанки; профилактике целлюлита; избавлению от нервного перенапряжения и стрессов, оказывая положительное влияние на весь организм в целом!",
+  },
+  {
+    title: "Табата",
+    description:
+      "Табата - Табата-тренировка – это высокоинтенсивный интервальный тренинг, цель которого выполнить максимальное количество движений за минимальное время, что обеспечивает высокие темпы снижения массы тела и повышения тонуса мускулатуры всего тела в кратчайшие сроки. Табата-тренировка имеет следующую структуру: 20 секунд максимальная нагрузка, 10 секунд отдых, повторяем этот цикл 8 раз. Это один табата-раунд, он длится всего лишь 4 минуты, но это будет по-настоящему сумасшедшие 4 минуты! Всего в тридцатиминутной тренировке – от 4 до 6 таких раундов. Одна такая тренировка приводит к сжиганию до 500 килокалорий и вызывает мощное ускорение обмена веществ на 48 часов!",
+  },
+  {
+    title: "TRX",
+    description:
+      "TRX - Если Ваша цель - полный контроль над координацией и балансом тела с высоким темпом тренировочной интенсивности, тогда клубный формат TRX – для Вас! TRX – это одновременно и название уникального функционального тренажера, и зарекомендовавшей себя по всему миру эффективной системы функциональных тренировок Total Resistance eXercise, призванной в краткий период придать вашему телу мускулистость и тонус, повысить скорость обменных процессов и эффективно снизить массу тела! В Sandow Fitness – Вы можете выбрать для себя как индивидуальный, так и групповой формат этого топового направления!",
+  },
+];
+
+export function setupModals() {
+  const trainingsCards = document.querySelectorAll(".trainings__item");
+  const trainingsModal = document.querySelector(".modal-trainings");
+  const modalCloseButton = document.querySelector(".modal__button-close");
+  const subscriptionButton = document.querySelector(".sign-up");
+  const subscriptionModal = document.querySelector(".modal-subscription");
+  const modalSubscriptionCloseButton = document.querySelector(
+    ".modal-subscription__close-button"
+  );
+  const abonementButton = document.querySelector(".abonement-button");
+  const modalBooking = document.querySelector(".modal-booking");
+  const modalBookingCloseButton = document.querySelector(
+    ".modal-booking__close-button"
+  );
+  const modalTitle = document.querySelector(".modal_title");
+  const modalText = document.querySelector(".modal_text");
+
+  console.log("subscriptionButton:", subscriptionButton);
+  console.log("abonementButton:", abonementButton);
+  console.log("trainingsCards:", trainingsCards);
+  console.log("subscriptionModal:", subscriptionModal);
+  console.log("modalBooking:", modalBooking);
+  console.log("trainingsModal:", trainingsModal);
+
+  trainingsCards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      modalTitle.textContent = cardData[index].title;
+      modalText.textContent = cardData[index].description;
+      trainingsModal.classList.add("modal_active");
+
+      const bookingButton = document.querySelector(".booking-button");
+      bookingButton.addEventListener("click", () => {
+        modalBooking.classList.add("modal_active");
+      });
+    });
+  });
+
+  modalCloseButton.addEventListener("click", () => {
+    trainingsModal.classList.remove("modal_active");
+  });
+
+  trainingsModal.addEventListener("click", (event) => {
+    if (event.target === trainingsModal) {
+      trainingsModal.classList.remove("modal_active");
+    }
+  });
+
+  subscriptionButton.addEventListener("click", () => {
+    subscriptionModal.classList.add("modal_active");
+  });
+
+  abonementButton.addEventListener("click", () => {
+    subscriptionModal.classList.add("modal_active");
+  });
+
+  modalSubscriptionCloseButton.addEventListener("click", () => {
+    subscriptionModal.classList.remove("modal_active");
+  });
+
+  subscriptionModal.addEventListener("click", (event) => {
+    if (event.target === subscriptionModal) {
+      subscriptionModal.classList.remove("modal_active");
+    }
+  });
+
+  modalBookingCloseButton.addEventListener("click", () => {
+    modalBooking.classList.remove("modal_active");
+  });
+
+  modalBooking.addEventListener("click", (event) => {
+    if (event.target === modalBooking) {
+      modalBooking.classList.remove("modal_active");
+    }
+  });
+}
