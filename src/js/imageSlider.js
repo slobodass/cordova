@@ -7,7 +7,7 @@ const images = [
   "https://static.tildacdn.com/tild3430-3663-4265-a166-313130323235/DSC01587.jpg",
   "https://static.tildacdn.com/tild3733-3562-4966-a461-666138313864/DSC01679.jpg",
   "https://static.tildacdn.com/tild3735-3537-4830-a138-653538336337/DSC01640.jpg",
-];
+];                                                                                                     //массив слайдера
 
 export function initializeImageSlider() {
   const sliderImage = document.querySelector(".slider-image");
@@ -17,17 +17,17 @@ export function initializeImageSlider() {
   const nextBtn = document.querySelector(".next-btn");
   let currentIndex = 0;
 
-  function updateSlider() {
-    sliderImage.src = images[currentIndex];
+  function updateSlider() {                                     //меняет атрибут src у картинки, подставляя URL из массива images по индексу currentIndex.
+    sliderImage.src = images[currentIndex];  
   }
 
   prevBtn.addEventListener("click", () => {
-    currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+    currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;  //если сейчас первый слайд, переходим к последнему; иначе — к предыдущему.
     updateSlider();
   });
 
   nextBtn.addEventListener("click", () => {
-    currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;  //если показывается последний слайд, переходим на первый; иначе — к следующему.
     updateSlider();
   });
 

@@ -1,5 +1,5 @@
 import "../css/index.css";
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";  //берём функцию инициализации Firebase‑приложения. 
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -23,7 +23,7 @@ const modalTitle = document.querySelector(".modal_title");
 const modalText = document.querySelector(".modal_text");
 const errorMessage = document.querySelector("#error-message")
 
-const firebaseConfig = {
+const firebaseConfig = {                                                      //объект с ключами проекта Firebase
     apiKey: "AIzaSyC6NSFMcNA2F3SgoCodLUt53Rt6vlGmKXI",
     authDomain: "sf-app-database.firebaseapp.com",
     projectId: "sf-app-database",
@@ -35,7 +35,7 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
-formRegistration.addEventListener('submit', async function (event) {
+formRegistration.addEventListener('submit', async function (event) {                             //Обработчик submit формы регистрации:
     event.preventDefault()
     const email = registerEmail.value;
     const password = registerPassword.value;
@@ -47,7 +47,7 @@ formRegistration.addEventListener('submit', async function (event) {
     }
 })
 
-formAuth.addEventListener('submit', async function (event) {
+formAuth.addEventListener('submit', async function (event) {                                       //Обработчик submit формы входа:
     event.preventDefault()
     const email = authEmail.value;
     const password = authPassword.value;
@@ -65,7 +65,7 @@ formAuth.addEventListener('submit', async function (event) {
 
 
 // click - обработчик событий
-loginTab.addEventListener('click', () => {
+loginTab.addEventListener('click', () => {                                        //Переключение вкладок
     loginTab.classList.add('active');
     // active - изменение цвета эл-та
     registerTab.classList.remove('active');
@@ -82,7 +82,7 @@ registerTab.addEventListener('click', () => {
     registerForm.style.display = 'block';
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {                               //Проверка авторизации после построения
     onAuthStateChanged(auth, (user) => {
       const isLoginPage = window.location.pathname.includes("login.html");
   

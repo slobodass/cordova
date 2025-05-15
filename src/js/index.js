@@ -8,17 +8,17 @@ import { setupModals } from "./modals.js";
 import { setupPhoneMask } from "./phoneMask.js";
 import { setupCordova } from "./cordova.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {     //Внутри обработчика вызываем подготовительные функции в нужном порядке
   setupAuthRedirect();
   initializeSwiper();
   initializeImageSlider();
   setupTrainers();
   setupForms();
   setupModals();
-  setupPhoneMask();
+  setupPhoneMask();                                        //
 });
 
-setupCordova();
+setupCordova();                                            //вызываем настройку Cordova
 
-const logoutBtn = document.querySelector(".logout-btn");
+const logoutBtn = document.querySelector(".logout-btn");  //находим кнопку «Выйти» по классу
 logoutBtn.addEventListener("click", logout);

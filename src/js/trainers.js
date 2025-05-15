@@ -1,11 +1,11 @@
-import elina from "@/img/Elina.jpg";
+import elina from "@/img/Elina.jpg";                        //импорты
 import konstantin from "@/img/Konstantin.jpg";
 import nikolai from "@/img/Nikolai.jpg";
 import uri from "@/img/Uri.jpg";
 import natalia from "@/img/Natalia.jpg";
-import vyacheslav from "@/img/Vyacheslav.jpg";
+import vyacheslav from "@/img/Vyacheslav.jpg";              //
 
-const trainers = [
+const trainers = [                                          //создаём массив объектов
   { selector: ".trainer-1", image: elina },
   { selector: ".trainer-2", image: konstantin },
   { selector: ".trainer-3", image: elina },
@@ -16,11 +16,11 @@ const trainers = [
   { selector: ".trainer-8", image: vyacheslav },
 ];
 
-export function setupTrainers() {
+export function setupTrainers() {                          //Перебираем каждый элемент массива
   trainers.forEach(({ selector, image }) => {
-    const el = document.querySelector(selector);
+    const el = document.querySelector(selector);           //находим DOM‑элемент по CSS‑классу.
     if (el) {
-      el.style.backgroundImage = `url(${image})`;
+      el.style.backgroundImage = `url(${image})`;          //Если элемент существует, задаём ему CSS‑свойство background-image со ссылкой на импортированную картинку.
     }
   });
 }

@@ -63,52 +63,52 @@ export function setupModals() {
   const modalTitle = document.querySelector(".modal_title");
   const modalText = document.querySelector(".modal_text");
 
-  trainingsCards.forEach((card, index) => {
-    card.addEventListener("click", () => {
-      modalTitle.textContent = cardData[index].title;
-      modalText.textContent = cardData[index].description;
+  trainingsCards.forEach((card, index) => {                                               //Перебираем каждую карточку.
+    card.addEventListener("click", () => {                                                //При клике:
+      modalTitle.textContent = cardData[index].title;                                     //вставляем заголовок и текст из массива cardData.
+      modalText.textContent = cardData[index].description;                                //показываем окно тренировок
       trainingsModal.classList.add("modal_active");
 
-      const bookingButton = document.querySelector(".booking-button");
+      const bookingButton = document.querySelector(".booking-button");                    //внутри открывшегося окна берём кнопку «Забронировать» и вешаем на неё открытие окна бронирования.
       bookingButton.addEventListener("click", () => {
         modalBooking.classList.add("modal_active");
       });
     });
   });
 
-  modalCloseButton.addEventListener("click", () => {
+  modalCloseButton.addEventListener("click", () => {                                      //кнопка «×» закрывает окно тренировок.
     trainingsModal.classList.remove("modal_active");
   });
 
-  trainingsModal.addEventListener("click", (event) => {
+  trainingsModal.addEventListener("click", (event) => {                                   // если пользователь кликает по затемнённому фону, окно тренировок закрывается.
     if (event.target === trainingsModal) {
       trainingsModal.classList.remove("modal_active");
     }
   });
 
-  subscriptionButton.addEventListener("click", () => {
+  subscriptionButton.addEventListener("click", () => {                                    //кнопка «sign‑up» открывает модалку «Абонемент».
     subscriptionModal.classList.add("modal_active");
   });
 
-  abonementButton.addEventListener("click", () => {
+  abonementButton.addEventListener("click", () => {                                       //альтернативная кнопка открывает то же самое окно.
     subscriptionModal.classList.add("modal_active");
   });
 
-  modalSubscriptionCloseButton.addEventListener("click", () => {
+  modalSubscriptionCloseButton.addEventListener("click", () => {                          //кнопка «×» закрывает окно «Абонемент».
     subscriptionModal.classList.remove("modal_active");
   });
 
-  subscriptionModal.addEventListener("click", (event) => {
+  subscriptionModal.addEventListener("click", (event) => {                                //клик по фону вокруг контента закрывает это окно.
     if (event.target === subscriptionModal) {
       subscriptionModal.classList.remove("modal_active");
     }
   });
 
-  modalBookingCloseButton.addEventListener("click", () => {
+  modalBookingCloseButton.addEventListener("click", () => {                               //кнопка «×» в окне бронирования закрывает его.
     modalBooking.classList.remove("modal_active");
   });
 
-  modalBooking.addEventListener("click", (event) => {
+  modalBooking.addEventListener("click", (event) => {                                     //клик по фону окна бронирования закрывает его.
     if (event.target === modalBooking) {
       modalBooking.classList.remove("modal_active");
     }

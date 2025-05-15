@@ -1,13 +1,13 @@
-import Swiper from "swiper";
-import "swiper/css";
+import Swiper from "swiper";                               //импортируем основной класс Swiper для создания слайдера.
+import "swiper/css";                                       //подключаем базовые стили Swiper
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";               //импортируем JS‑модуль Navigation
 
 export function initializeSwiper() {
   return new Swiper(".swiper-container", {
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 30,
+    loop: true,                                            //включаем бесконечную прокрутку
+    slidesPerView: 3,                                      //по умолчанию показываем 3 слайда одновременно.
+    spaceBetween: 30,                                      //расстояние между слайдами
     breakpoints: {
       320: {
         slidesPerView: 1,

@@ -19,7 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export function setupAuthRedirect() {
+export function setupAuthRedirect() {                      //объявляем и экспортируем функцию setupAuthRedirect.
   onAuthStateChanged(auth, (user) => {
     if (!user) {
       window.location.href = "login.html";
@@ -28,14 +28,14 @@ export function setupAuthRedirect() {
 }
 
 export function logout() {
-  signOut(auth)
+  signOut(auth)                                           //инициируем выход пользователя из Firebase Auth
     .then(() => {
       console.log("Выход выполнен успешно");
-      window.location.href = "login.html";
+      window.location.href = "login.html";             //перенаправляем пользователя на страницу входа
     })
-    .catch((error) => {
-      console.error("Ошибка при выходе: ", error);
+    .catch((error) => {                              //обрабатываем возможную ошибку при выходе
+      console.error("Ошибка при выходе: ", error);  //выводим описание ошибки в консоль
     });
 }
 
-export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword };
+export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword };   //переэкспортируем объекты/функции auth, createUserWithEmailAndPassword и signInWithEmailAndPassword, чтобы их можно было импортировать из этого модуля в других файлах.
